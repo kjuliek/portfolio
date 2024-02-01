@@ -248,11 +248,11 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
+  color: var(--bs-indigo);
   text-decoration: underline;
 }
 a:hover {
-  color: var(--bs-link-hover-color);
+  color: var(--bs-indigo);
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -11025,12 +11025,14 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #fff;
+  color: rgba(var(--bs-pink-rgb, 1));;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: rgba(var(--bs-white-rgb), 0.5);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -11123,6 +11125,7 @@ footer.footer .social-link:hover {
     margin-left: 5rem;
     margin-right: 5rem;
     margin-bottom: 5rem;
+    display: None;
   }
   .portfolio-item img {
     transition: -webkit-clip-path 0.25s ease-out;
@@ -11136,9 +11139,13 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(29, 128, 159, 0.9);
+    background-color: rgba(var(--bs-indigo-rgb), 0.8);
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
+  }
+
+  .portfolio-item:hover .caption .caption-content {
+    display: block;
   }
 }
 
